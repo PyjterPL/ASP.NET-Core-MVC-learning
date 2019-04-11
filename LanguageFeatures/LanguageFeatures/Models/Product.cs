@@ -16,7 +16,7 @@ namespace LanguageFeatures.Models
         public decimal? Price { get; set; }
         public Product Related { get; set; }
         public bool InStock { get; }
-        public bool NameBeginsWithS => Name?[0] == 'P';
+        public bool NameBeginsWithS => Name?[0] == 'S';
         public static Product[] GetProducts()
         {
             Product kayak = new Product
