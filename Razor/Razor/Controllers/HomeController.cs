@@ -19,6 +19,9 @@ namespace Razor.Controllers
                 Category = "Water sports",
                 Price = 275M
             };
+
+            ViewBag.StockLevel = 2;
+
             return View(myProduct);
         }
     }

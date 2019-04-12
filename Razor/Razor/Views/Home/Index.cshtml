@@ -4,16 +4,9 @@
     ViewBag.Title = "Product name";
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div>
-        Product name: @Model.Name
-    </div>
-</body>
-</html>
+
+<p> Product name: @Model.Name</p>
+<p> Product price: @($"{Model.Price:C2}")</p>
+<p> Stock level: @ViewBag.StockLevel</p>
+
