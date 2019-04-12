@@ -9,20 +9,16 @@ namespace Razor.Controllers
 {
     public class HomeController : Controller
     {
-        public ViewResult Index()
+        public IActionResult Index()
         {
-            var myProduct = new Product
+            Product[] productArray =
             {
-                ProductID = 1,
-                Name = "Kayak",
-                Description = "One person boat",
-                Category = "Water sports",
-                Price = 275M
+                new Product {Name = "Kayak", Price = 275M},
+                new Product {Name = "Life jacket", Price = 48.95M},
+                new Product {Name = "Football", Price = 19.50M},
+                new Product {Name = "Flag", Price = 34.95M},
             };
-
-            ViewBag.StockLevel = 2;
-
-            return View(myProduct);
+            return View(productArray);
         }
     }
 }
