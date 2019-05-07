@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace SportsStore.Infrastructure
 {
-    [HtmlTargetElement("div",Attributes = "page-model")]
+    [HtmlTargetElement("div", Attributes = "page-model")]
     public class PageLinkTagHelper : TagHelper
     {
         private IUrlHelperFactory urlHelperFactory;
@@ -47,7 +47,7 @@ namespace SportsStore.Infrastructure
                 if (PageClassesEnabled)
                 {
                     tag.AddCssClass(PageClass);
-                    tag.AddCssClass(i == PageModel.CurrentPage 
+                    tag.AddCssClass(i == PageModel.CurrentPage
                         ? PageClassSelected : PageClassNormal);
                 }
                 tag.InnerHtml.Append(i.ToString());
